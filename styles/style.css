@@ -4,12 +4,11 @@
   box-sizing: border-box;
   max-width: 375px;
   margin: 0 auto;
-  padding: 0 10px;
   font-family: var(--main-font), sans-serif;
   color: var(--text-color);
   background-image: url(/images/cover-image-dark.png);
-  background-attachment: fixed;
   background-position: center;
+  background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -17,6 +16,7 @@
 header {
   position: relative;
   margin-bottom: 106px;
+  padding: 0 10px;
 }
 
 .rec {
@@ -32,6 +32,7 @@ header {
   top: 10px;
   right: 0px; 
 }
+
 .circle {
   width: 9px;
   height: 9px;
@@ -91,6 +92,10 @@ button {
   font-weight: normal;
   padding: 1.5px 13px;
   cursor: pointer;
+}
+
+.section {
+  padding: 0 10px;
 }
 
 span {
@@ -188,6 +193,7 @@ header .heading-list {
   grid-template-columns: repeat(5 1fr);
   grid-template-rows: repeat(5 1fr);
   gap: 10px;
+  padding: 0 10px;
 }
 
 img {
@@ -228,10 +234,6 @@ footer::after {
   margin-bottom: 285px;
 }
 
-
-
-
-
 @media (width>=768px) {
   .page {
     max-width: 768px;
@@ -244,6 +246,7 @@ footer::after {
 
   .header {
     margin-bottom: 243px;
+    padding: 0 20px;
   }
 
   .header__title {
@@ -270,6 +273,10 @@ footer::after {
   ul {
     padding-top: 192px;
     margin-bottom: 173px;
+  }
+
+  .section {
+    padding: 0 20px;
   }
 
   .first-section {
@@ -309,6 +316,7 @@ footer::after {
 
   .picture {
     gap: 20px;
+    padding: 0 20px;
   }
 
   .img-item-1 {
