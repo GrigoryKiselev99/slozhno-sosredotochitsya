@@ -10,12 +10,14 @@
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
+  background-color: var(--heading-color);
 }
 
 header {
   position: relative;
-  margin-bottom: 106px;
+  margin-bottom: 40px;
   padding: 0 10px;
+  block-size: 100vh;
 }
 
 .rec {
@@ -29,7 +31,7 @@ header {
   text-align: center;
   gap: 3px;
   top: 10px;
-  right: 0px;
+  right: 10px;
 }
 
 .circle {
@@ -45,7 +47,7 @@ header {
   content: "";
   position: absolute;
   top: 10px;
-  right: 0;
+  right: 10px;
   width: 25px;
   height: 25px;
   border-top: 1px solid var(--main-color);
@@ -55,8 +57,8 @@ header {
 .decorated-zone::after {
   content: "";
   position: absolute;
-  bottom: -56px;
-  left: 0;
+  bottom: 10px;
+  left: 10px;
   width: 25px;
   height: 25px;
   border-bottom: 1px solid var(--main-color);
@@ -65,7 +67,7 @@ header {
 
 .header__title {
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  line-height: 95.7px;
+  line-height: 82.5%;
   font-weight: bold;
   color:var(--secong-color);
   text-shadow: 4px 4px 0 var(--main-color);
@@ -107,7 +109,7 @@ a {
 }
 
 a:focus {
-  outline: none;    
+  outline: none;
   border: 1px solid var(--text-color);
 }
 
@@ -202,16 +204,17 @@ img {
 }
 
 footer {
-  padding-top: 326px;
   position: relative;
   padding: 0 10px;
+  block-size: 100vh;
+  margin-top: 40px;
 }
 
 footer::before {
   content: "";
   position: absolute;
-  top: 50px;
-  right: 0;
+  top: 10px;
+  right: 10px;
   width: 25px;
   height: 25px;
   border-top: 1px solid var(--main-color);
@@ -221,8 +224,8 @@ footer::before {
 footer::after {
   content: "";
   position: absolute;
-  bottom: -275px;
-  left: 0;
+  bottom: 10px;
+  left: 10px;
   width: 25px;
   height: 25px;
   border-bottom: 1px solid var(--main-color);
@@ -231,7 +234,8 @@ footer::after {
 
 .footer__title {
   text-shadow: 2px 2px 0 var(--main-color);
-  margin-bottom: 285px;
+  padding-top: 285px;
+  text-align: center;
 }
 
 @media (width>=768px) {
@@ -241,16 +245,16 @@ footer::after {
 
   .rec {
     top: 20px;
+    right: 20px;
   }
 
   .header {
-    margin-bottom: 243px;
+    margin-bottom: 60px;
     padding: 0 20px;
   }
 
   .header__title {
     margin-bottom: 162px;
-    line-height: 99px;
   }
 
   .header .heading-list {
@@ -263,10 +267,12 @@ footer::after {
 
   .decorated-zone::before {
     top: 20px;
+    right: 20px;
   }
 
   .decorated-zone::after {
-    bottom: -163px;
+    left: 20px;
+    bottom: 20px;
   }
 
   ul {
@@ -354,20 +360,22 @@ footer::after {
   }
 
   footer {
-    padding-top: 523px;
     padding: 0 20px;
+    margin-top: 60px;
   }
 
   .footer__title {
-    text-align: center;
+    padding-top: 463px;
   }
 
   footer::before {
-    top: 80px;
+    top: 20px;
+    right: 20px;
   }
 
   footer::after {
-    bottom: -442px;
+    bottom: 20px;
+    left: 20px;
   }
 }
 
@@ -377,21 +385,16 @@ footer::after {
   }
 
   .header {
-    margin-bottom: 194px;
+    margin-bottom: 60px;
   }
 
   .header__title {
     text-shadow: #FF0070;
     margin-bottom: 114px;
-    line-height: 129.53px;
   }
 
   .heading {
     min-width: 315px;
-  }
-
-  .decorated-zone::after {
-    bottom: -114px;
   }
 
   ul {
@@ -423,11 +426,7 @@ footer::after {
     grid-row-end: 2;
   }
 
-  footer {
-    padding-top: 379px;
-  }
-
-  footer::after {
-    bottom: -199px;
+  .footer__title {
+    padding-top: 319px;
   }
 }
