@@ -3,7 +3,6 @@
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   box-sizing: border-box;
   max-width: 375px;
-  margin: 0 auto;
   font-family: var(--main-font), sans-serif;
   color: var(--text-color);
   background-image: url(/images/cover-image-dark.png);
@@ -30,7 +29,7 @@ header {
   text-align: center;
   gap: 3px;
   top: 10px;
-  right: 0px; 
+  right: 0px;
 }
 
 .circle {
@@ -99,17 +98,17 @@ button {
 }
 
 span {
-  text-shadow: 1px 1px 0 var(--main-color);   
+  text-shadow: 1px 1px 0 var(--main-color);
 }
 
 a {
   text-decoration: none;
   border: none;
-}              
+}
 
 a:focus {
   outline: none;    
-  border: 1px solid var(--text-color); 
+  border: 1px solid var(--text-color);
 }
 
 a:hover {
@@ -122,7 +121,7 @@ button:focus {
 }
 
 button:hover {
-  border: 1px solid rgb(255, 0, 112, 0.4); 
+  border: 1px solid rgb(255, 0, 112, 0.4);
 }
 
 header .heading-list {
@@ -205,6 +204,7 @@ img {
 footer {
   padding-top: 326px;
   position: relative;
+  padding: 0 10px;
 }
 
 footer::before {
@@ -237,7 +237,6 @@ footer::after {
 @media (width>=768px) {
   .page {
     max-width: 768px;
-    padding: 0 20px;
   }
 
   .rec {
@@ -354,8 +353,9 @@ footer::after {
     grid-row-end: 4;
   }
 
-  footer{
+  footer {
     padding-top: 523px;
+    padding: 0 20px;
   }
 
   .footer__title {
@@ -423,7 +423,7 @@ footer::after {
     grid-row-end: 2;
   }
 
-  footer{
+  footer {
     padding-top: 379px;
   }
 
