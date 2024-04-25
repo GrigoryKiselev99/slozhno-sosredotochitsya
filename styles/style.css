@@ -250,7 +250,8 @@ footer::after {
 
   .header {
     margin-bottom: 60px;
-    padding: 0 20px;
+    /* padding: 0 20px; */
+    padding: 0;
   }
 
   .header__title {
@@ -259,10 +260,15 @@ footer::after {
 
   .header .heading-list {
     margin-left: 50%;
+    margin-right: 20px;
   }
 
   .heading {
     min-width: 236px;
+  }
+
+  .section .heading-list:last-child {
+    margin-bottom: 20px;
   }
 
   .decorated-zone::before {
@@ -278,6 +284,7 @@ footer::after {
   ul {
     padding-top: 192px;
     margin-bottom: 173px;
+    margin-right: 20px;
   }
 
   .section {
@@ -387,7 +394,7 @@ footer::after {
   .header {
     margin-bottom: 60px;
   }
-
+  
   .header__title {
     text-shadow: #FF0070;
     margin-bottom: 114px;

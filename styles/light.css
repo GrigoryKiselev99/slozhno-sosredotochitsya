@@ -28,6 +28,33 @@
     --text-color: #353430;
     --secong-color: #FFC2E6;
   }
+  .rec {
+    display: none;
+  }
+  .page {
+    background-image: url(/images/cover-image-light.png);
+  }
+  button {
+    color: #353430;
+  }
+  .heading {
+    color: #353430;
+  }
+  .heading-list {
+    color: #353430;
+  }
+  @media (width>=1024px) {
+    .header__title {
+      text-shadow: 4px 4px 0 #FF0070;
+    }
+  }
+}
+
+.theme_light .page {
+  background-image: url(/images/cover-image-light.png);
+  object-fit: cover;
+  object-position: center;
+  background-color: #FFF1F7;
 }
 
 .theme_light button {
@@ -43,15 +70,11 @@
 }
 
 .theme_light .decorated-zone::before,
-.theme_light footer::before {
+.theme_light .decorated-zone::after,
+.theme_light footer::before,
+.theme_light footer::after {
   border-top: 1px solid var(--text-color);
   border-right: 1px solid var(--text-color);
-}
-
-.theme_light .decorated-zone::after,
-.theme_light footer::after {
-  border-bottom: 1px solid var(--text-color);
-  border-left: 1px solid var(--text-color);
 }
 
 .theme_light .rec {
