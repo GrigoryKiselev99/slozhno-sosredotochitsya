@@ -194,10 +194,13 @@ header .heading-list {
   grid-template-columns: repeat(5 1fr);
   grid-template-rows: repeat(5 1fr);
   gap: 10px;
-  padding: 0 10px;
 }
 
-img {
+.picture .heading-list {
+  margin: 0;
+}
+
+.img-item {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -304,20 +307,19 @@ footer {
   }
 
   .reasons-section-container:last-child {
-    margin-block-end: 80px;
+    margin-bottom: 60px;
   }
   
   .concentration-section-container:last-child {
-    margin-block-end: 80px;
+    margin-bottom: 60px;
   }
   
   .advices-section-container:last-child {
-    margin-block-end: 80px;
+    margin-bottom: 60px;
   }
 
   .picture {
     gap: 20px;
-    padding: 0 20px;
   }
   
   .img-item:first-child {
