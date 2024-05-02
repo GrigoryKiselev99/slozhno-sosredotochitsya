@@ -12,9 +12,12 @@
   background-image: url(../images/cover-image-dark.png);
   background-color: #000028;
   --main-font: 'IBM Plex Mono';
+  --button-color: #FF0070;
+  --shadow-color:#FF0070;
+  --heading-color: #DB00FF;
   --main-color: #FF0070;
   --text-color: #F1B2CE;
-  --secong-color: #DB00FF;
-  --heading-color: #000028;
+  --section-heading-color: #FF0070;
+  --section-container-color:  #000028;
+  --background-color: #000028;
 }
-

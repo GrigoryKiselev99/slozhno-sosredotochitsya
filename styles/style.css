@@ -3,17 +3,19 @@
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   box-sizing: border-box;
   max-width: 375px;
-  font-family: var(--main-font), sans-serif;
   color: var(--text-color);
-  background-image: url(/images/cover-image-dark.png);
+  font-family: var(--main-font), sans-serif;
+  background-image: url(../images/cover-image-dark.png);
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
-  background-color: var(--heading-color);
+  background-color: var(--background-color);
 }
 
 header {
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
   min-height: 668px;
   position: relative;
   margin-block-end: 40px;
@@ -24,7 +26,7 @@ header {
 .rec {
   display: flex;
   position:absolute;
-  color: var(--main-color);
+  color: var(--button-color);
   font-size: 18px;
   font-weight: 400;
   line-height: 25px;
@@ -41,9 +43,9 @@ header {
   right: -28px;
   width: 9px;
   height: 9px;
-  box-shadow: 0px 0px 4px 2px var(--main-color);
+  box-shadow: 0px 0px 4px 2px var(--button-color);
   border-radius: 50%;
-  background-color: var(--main-color);
+  background-color: var(--button-color);
   margin: 8px;
 }
 
@@ -54,8 +56,8 @@ header {
   right: 10px;
   width: 25px;
   height: 25px;
-  border-top: 1px solid var(--main-color);
-  border-right: 1px solid var(--main-color);
+  border-top: 1px solid var(--button-color);
+  border-right: 1px solid var(--button-color);
 }
 
 .decorated-zone::after {
@@ -65,16 +67,16 @@ header {
   left: 10px;
   width: 25px;
   height: 25px;
-  border-bottom: 1px solid var(--main-color);
-  border-left: 1px solid var(--main-color);
+  border-bottom: 1px solid var(--button-color);
+  border-left: 1px solid var(--button-color);
 }
 
 .header__title {
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 82.5%;
   font-weight: bold;
-  color:var(--secong-color);
-  text-shadow: 4px 4px 0 var(--main-color);
+  color:var(--heading-color);
+  text-shadow: 4px 4px 0 var(--shadow-color);
   margin-block-end: 55px;
 }
 
@@ -87,8 +89,8 @@ ul {
   padding-top: 75px;
 }
 
-button {
-  color: var(--main-color);
+.header__theme-menu-button {
+  color: var(--button-color);
   background: none;
   border: none;
   text-transform: lowercase;
@@ -121,23 +123,29 @@ a:focus-visible {
 }
 
 a:hover {
-  border-bottom: 2px solid var(--text-color);
+  border-bottom: 1px solid var(--text-color);
 }
 
-button:focus {
+.header__theme-menu-button:focus {
   outline: none;
 }
 
-button:focus-visible {
-  border-bottom: 1px solid var(--main-color);
+.header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid var(--button-color);
 }
 
-button:hover {
-  border: 1px solid rgb(255, 0, 112, 0.4);
+.header__theme-menu-button:hover {
+  border: 1px solid var(--button-color);
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--button-color);
+  pointer-events: none;
 }
 
 header .heading-list {
   margin-block-end: 0;
+  align-self: flex-start;
 }
 
 .heading-list {
@@ -145,7 +153,7 @@ header .heading-list {
   line-height: 23.4px;
   font-weight: 700;
   background: var(--main-color);
-  color: var(--heading-color);
+  color: var(--section-container-color);
   margin-bottom: 10px;
 }
 
@@ -154,12 +162,12 @@ header .heading-list {
   line-height: 23.4px;
   font-weight: 400;
   background: var(--main-color);
-  color: var(--heading-color);
+  color: var(--section-container-color);
   margin-bottom: 10px;
 }
 
 .heading {
-  color: var(--main-color);
+  color: var(--section-heading-color);
   font-weight: 700;
   line-height: 23.4px;
   font-size: 18px;
@@ -173,16 +181,16 @@ header .heading-list {
   margin-bottom: 20px;
 }
 
-.reasons-section-container:last-child {
-  margin-block-end: 50px;
+.reasons {
+  margin-bottom: 50px;
 }
 
-.concentration-section-container:last-child {
-  margin-block-end: 50px;
+.concentration {
+  margin-bottom: 50px;
 }
 
-.advices-section-container:last-child {
-  margin-block-end: 50px;
+.advices {
+  margin-bottom: 50px;
 }
 
 .advices .heading-list {
@@ -191,8 +199,6 @@ header .heading-list {
 
 .picture {
   display: grid;
-  grid-template-columns: repeat(5 1fr);
-  grid-template-rows: repeat(5 1fr);
   gap: 10px;
 }
 
@@ -217,17 +223,12 @@ footer {
 }
 
 .footer__title {
-  text-shadow: 2px 2px 0 var(--main-color);
+  text-shadow: 2px 2px 0 var(--shadow-color);
   text-align: center;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 82.5%;
   font-weight: bold;
-  color:var(--secong-color);
-}
-
-.header__theme-menu-button_active {
-  border: 1px solid var(--main-color);
-  padding: 0, 25px, 0px, 25px;
+  color:var(--heading-color);
 }
 
 @media (width>=768px) {
@@ -306,15 +307,15 @@ footer {
     gap: 20px;
   }
 
-  .reasons-section-container:last-child {
+  .reasons {
     margin-bottom: 60px;
   }
   
-  .concentration-section-container:last-child {
+  .concentration {
     margin-bottom: 60px;
   }
   
-  .advices-section-container:last-child {
+  .advices {
     margin-bottom: 60px;
   }
 
@@ -371,16 +372,6 @@ footer {
 
   .footer__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-  }
-
-  footer::before {
-    top: 20px;
-    right: 20px;
-  }
-
-  footer::after {
-    bottom: 20px;
-    left: 20px;
   }
 }
 
