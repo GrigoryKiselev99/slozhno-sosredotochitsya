@@ -307,15 +307,15 @@ footer {
     gap: 20px;
   }
 
-  .reasons {
+  .reasons-section-container {
     margin-bottom: 60px;
   }
   
-  .concentration {
+  .concentration-section-container {
     margin-bottom: 60px;
   }
   
-  .advices {
+  .advices-section-container {
     margin-bottom: 60px;
   }
 
