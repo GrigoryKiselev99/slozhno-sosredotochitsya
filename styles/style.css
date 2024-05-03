@@ -85,7 +85,7 @@ ul {
   flex-direction: column;
   align-items: flex-end;
   row-gap: 16px;
-  column-gap: 12px; 
+  column-gap: 12px;
   margin-block-end: 65px;
   padding-top: 75px;
 }
