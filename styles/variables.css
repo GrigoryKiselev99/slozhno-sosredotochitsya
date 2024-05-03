@@ -5,6 +5,7 @@
 :root {
   --main-font: 'IBM Plex Mono';
   --button-color: #FF0070;
+  --button-hover-color: 255, 0, 112;
   --shadow-color:#FF0070;
   --heading-color: #DB00FF;
   --main-color: #FF0070;
